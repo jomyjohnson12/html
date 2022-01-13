@@ -1,0 +1,43 @@
+<html>
+
+    <head> 
+        <title>form</title>
+        
+    </head>
+    <body>
+        <div>
+            <form name="myform" method="post" onsubmit="return validateform()" action="home">
+                <label>Name:</label>
+                <input type="text" id="text" name="text">
+                <br><br>
+                <label>Password:</label>
+                <input type="password" id="password" name="pass">
+                <br><br>
+                <input type="submit">
+                <br><br>
+    
+            </form>
+
+        </div>
+
+       
+    </body>
+
+ <script>
+        function validateform(){
+            var name = document.myform.text.value;
+            var epassword =document.myform.password.value;
+            if(name==null||name==""){
+                alert("Enter a valid Name"); 
+                return false;
+
+            }
+            else if(epassword.length<8){
+                alert("minimum 8 characters required");
+            }
+
+        }
+    
+
+    </script>
+</html>
